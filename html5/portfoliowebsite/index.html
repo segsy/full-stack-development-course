@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Landing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">YourName</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#home" data-target="home" class="nav-link active">Home</a></li>
+          <li><a href="#about" data-target="about" class="nav-link">About</a></li>
+          <li><a href="#skills" data-target="skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" data-target="projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" data-target="contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi, I'm YourName</h1>
+          <p>Full‑stack developer building modern, accessible web experiences.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+  <div class="avatar">YN</div>
+
+  <!-- use a figure wrapper for semantics and easier styling -->
+  <figure class="hero-illustration" aria-hidden="true">
+    <img src="img/hero-illustration.svg" alt="Hero illustration" loading="lazy" />
+  </figure>
+</div>
+      </div>
+    </section>
+
+    <section id="about" class="section about container">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>Brief introduction about yourself. Experience, tools you like, and what you build.</p>
+          <ul class="about-list">
+            <li>Location: Your City</li>
+            <li>Email: you@example.com</li>
+            <li>Availability: Open for work</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Readable, maintainable code</li>
+            <li>Responsive, accessible UI</li>
+            <li>Testing and performance focused</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <label>HTML</label>
+          <div class="bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+          <label>CSS</label>
+          <div class="bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill">
+          <label>JavaScript</label>
+          <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+          <label>Backend</label>
+          <div class="bar"><div class="fill" style="width:70%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects container">
+      <h2>Projects</h2>
+
+      <!-- Tabs section with 4 tabs -->
+      <div class="tabs">
+        <div class="tab-buttons" role="tablist" aria-label="Project categories">
+          <button class="tab-btn active" data-tab="all">All</button>
+          <button class="tab-btn" data-tab="web">Web</button>
+          <button class="tab-btn" data-tab="ui">UI/UX</button>
+          <button class="tab-btn" data-tab="tools">Tools</button>
+        </div>
+
+        <!-- ...existing code... -->
+    <div class="tab-panels">
+      <div class="tab-panel active" data-panel="all">
+        <div class="project-grid">
+          <article class="card" data-title="Project One" data-desc="A responsive site built with HTML/CSS/JS." data-url="https://github.com/yourname/project-one" data-img="img/project1.svg">
+            <div class="card-media"><img src="img/project1.svg" alt="Project One preview"></div>
+            <div class="card-body">
+              <h3>Project One</h3>
+              <p>Short description of the project and tech used.</p>
+              <a class="card-link" href="#" role="button">View</a>
+            </div>
+          </article>
+
+          <article class="card" data-title="Project Two" data-desc="A single-page app with animations." data-url="https://github.com/yourname/project-two" data-img="img/project2.svg">
+            <div class="card-media"><img src="img/project2.svg" alt="Project Two preview"></div>
+            <div class="card-body">
+              <h3>Project Two</h3>
+              <p>Short description of the project and tech used.</p>
+              <a class="card-link" href="#" role="button">View</a>
+            </div>
+          </article>
+
+          <article class="card" data-title="Project Three" data-desc="A small library/tooling example." data-url="https://github.com/yourname/project-three" data-img="img/project3.svg">
+            <div class="card-media"><img src="img/project3.svg" alt="Project Three preview"></div>
+            <div class="card-body">
+              <h3>Project Three</h3>
+              <p>Short description of the project and tech used.</p>
+              <a class="card-link" href="#" role="button">View</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      
+          <div class="tab-panel" data-panel="web">
+            <p>Web projects — replace with your own project cards.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="ui">
+            <p>UI/UX case studies and mockups.</p>
+          </div>
+
+          <div class="tab-panel" data-panel="tools">
+            <p>Developer tools, CLI utilities or libraries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact container">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <input type="text" name="name" id="name" placeholder="Your name" required />
+          <input type="email" name="email" id="email" placeholder="Email" required />
+        </div>
+        <textarea name="message" id="message" rows="6" placeholder="Message" required></textarea>
+        <div class="form-actions">
+          <button class="btn" type="submit">Send Message</button>
+        </div>
+        <p id="formMsg" class="form-msg" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> YourName — Built with HTML, CSS, JS</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

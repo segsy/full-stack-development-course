@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Functions  Javascript </title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        function  convertToCelsius(fahrenheit){
+          let celsius = (fahrenheit -32) * 5/9;
+          return celsius;
+
+        }
+
+        for (let temp = 32; temp <= 100; temp += 17){
+          console.log(`${temp}°F = ${convertToCelsius(temp).toFixed(2)}°C`);
+
+        }
+    </script>
+
+   
+</body>
+</html>

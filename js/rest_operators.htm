@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Merging Object</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+    /*function sum(...nums){
+        return nums.reduce((total,n) => total + n,0);
+    }
+    console.log(sum(10,20,30,40)); // 100)*/
+   const colors = ["red","blue","green","yellow"];
+const [primary, secondary, ...others] = colors;
+console.log(primary); // red
+console.log(secondary); // blue
+console.log(others); // ["green", "yellow"]
+        </script>
+
+   
+</body>
+</html>

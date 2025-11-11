@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Local Storage</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+      
+// JavaScript object
+const user = { name: "Segun", country: "Nigeria", role: "Developer" };
+
+// Convert to JSON string before saving
+localStorage.setItem("user", JSON.stringify(user));
+
+// Retrieve and parse back to an object
+const savedUser = JSON.parse(localStorage.getItem("user"));
+
+console.log(savedUser.name); // Segun
+
+    
+    </script>
+
+   
+</body>
+</html>

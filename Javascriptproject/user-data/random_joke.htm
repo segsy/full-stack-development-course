@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <title>😂 Random Joke Generator</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px;">
+   <h2>😂 Random Joke Generator</h2>
+   <p id="joke">Click the button to load a joke!</p>
+   <button id="btn">Tell Me a Joke</button>
+
+   <script>
+    const btn = document.getElementById("btn");
+    const jokeEl  = document.getElementById("joke");
+
+
+    async function getJoke(){
+        jokeEl.textContent= "Loading....";
+        try {
+            const response = await fetch("https://official-joke-api.appspot.com/random_joke");
+            const joke = await response.json();
+              jokeEl.textContent = `${joke.setup} 😂 ${joke.punchline}`;
+      } catch (error) {
+        jokeEl.textContent = "❌ Failed to fetch a joke.";
+      }
+    }
+    btn.addEventListener("click", getJoke);
+
+   </script>
+   
+</body>
+</html>

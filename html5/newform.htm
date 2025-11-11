@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form </title>
+  <style>
+    body{
+        font-family:'Segoe UI',Arial, sans-serif;
+    }
+    form {
+        width: 100%;
+        max-width:400px;
+        background-color:#e8f5e9;
+        padding:20px;
+        border:  1px solid #ccc;
+        border-radius:5px;
+    }
+    legend{
+        font-size:1.2rem;
+        font-weight:bold;
+        margin-bottom:10px;
+    }
+    label{
+        display:block;
+        margin-bottom:5px;
+        font-size:0.9rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        width:100%;
+        padding:8px;
+        margin-bottom:15px;
+        border:1px sold #ccc;
+        border-radius:4px;
+        box-sizing:border-box;
+    }
+    textarea{
+        resize:none
+    }
+    input[type="submit"]{
+        width:100%
+        padding:10px;
+        font-size:1rem;
+        color:#fff;
+        background-color:#04af2f;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+    }
+    input[type="submit"]:hover{
+        background-color:#039325;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>HTML Form</h1>
+  <form>
+    <fieldset>
+        <legend>Registration Form</legend>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" />
+
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+
+        <label for="confirmpassword">Confirm Your Password</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" />
+
+         <label for="address">Address</label>
+        <textarea id="address" name="address"></textarea>
+        <input type="submit" value="Submit">
+
+
+
+
+
+
+    </fieldset>
+
+  </form>
+</body>
+</html>

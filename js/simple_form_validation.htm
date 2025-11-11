@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 400px; margin: 40px auto; }
+    input { width: 100%; padding: 8px; margin-bottom: 10px; }
+    .error { color: red; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>Signup Form</h2>
+  <form id="signupForm">
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter your email">
+    <p id="emailError" class="error"></p>
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter password">
+    <p id="passwordError" class="error"></p>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("signupForm");
+
+    form.addEventListener("submit", function(event) {
+      // Stop form submission
+      event.preventDefault();
+
+      // Get values
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Clear old errors
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("passwordError").innerText = "";
+
+      // Validate email
+      if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required.";
+      } else if (!email.includes("@")) {
+        document.getElementById("emailError").innerText = "Please enter a valid email.";
+      }
+
+      // Validate password
+      if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+      }
+
+      // If no errors, submit successfully
+      if (email.includes("@") && password.length >= 6) {
+        alert("Form submitted successfully!");
+        form.reset(); // clear form
+      }
+    });
+  </script>
+
+  </body>
+</html>

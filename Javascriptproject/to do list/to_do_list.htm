@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Persistent To-Do List</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>📝 To-Do List (with Local Storage)</h2>
+  <input type="text" id="taskInput" placeholder="Enter new task">
+  <button id="addTask">Add Task</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const addTask = document.getElementById("addTask");
+    const taskList = document.getElementById("taskList");
+
+    // Load saved tasks
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    // Render tasks
+    function displayTasks() {
+      taskList.innerHTML = "";
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.textContent = task;
+        li.addEventListener("click", () => deleteTask(index));
+        taskList.appendChild(li);
+      });
+    }
+
+    // Add new task
+    addTask.addEventListener("click", () => {
+      const task = taskInput.value.trim();
+      if (task !== "") {
+        tasks.push(task);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        taskInput.value = "";
+        displayTasks();
+      }
+    });
+
+    // Delete task
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      displayTasks();
+    }
+
+    displayTasks();
+  </script>
+</body>
+</html>

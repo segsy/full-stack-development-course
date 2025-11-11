@@ -1,0 +1,12 @@
+/* small screens */
+@media (max-width:720px){
+  .nav-toggle{display:block}
+  .main-nav{position:absolute;left:0;right:0;top:64px;background:rgba(3,7,18,0.98);display:none;padding:12px;border-top:1px solid rgba(255,255,255,0.03)}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;gap:8px}
+  .project-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+  .hero-text h1{font-size:1.8rem}
+  .header-inner{padding:10px 0}
+  .avatar{width:120px;height:120px;font-size:28px}
+}

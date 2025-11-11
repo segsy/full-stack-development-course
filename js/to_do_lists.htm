@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My To do </title>
+</head>
+<body>
+<input id="taskInput" type="text" placeholder="Enter task">
+<button id="addTaskBtn">Add Task</button>
+<ul id="taskList"></ul>
+</body>
+
+
+<script>
+const input = document.querySelector('#taskInput');
+const button = document.querySelector('#addTaskBtn');
+const list = document.querySelector('#taskList');
+
+button.addEventListener('click',() =>{
+   const task = input.value.trim();
+  if (task !== '') {
+    list.innerHTML += `<li>${task}</li>`;
+    input.value = ''; // Clear input field
+  }
+});
+</script>
+
+   
+</body>
+</html>

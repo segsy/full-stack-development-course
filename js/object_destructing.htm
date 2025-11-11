@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Object destructing</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+    const user = {
+  name: "Segun",
+  role: "Full Stack Developer",
+  country: "Nigeria"
+};
+ 
+ // Destructuring way
+const { name, role, country } = user;
+
+//console.log(`${name} is a ${role} from ${country}`);
+ const { role: jobName } = name;
+ const { role: jobTitle } = user;
+ console.log(name); // Full Stack Developer
+ console.log(jobTitle); // Full Stack Developer
+
+ //numbers
+ const numbers = [1, 2, 3];
+const moreNumbers = [...numbers, 4, 5, 6];
+
+console.log(moreNumbers); // [1, 2, 3, 4, 5, 6]
+   
+        </script>
+
+   
+</body>
+</html>

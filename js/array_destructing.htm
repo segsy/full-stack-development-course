@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Array destructing</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+     const fruits = ["🍎 Apple", "🍌 Banana", "🍒 Cherry"];
+     // Traditional way
+     const first = fruits[0];
+     const second = fruits[1];
+       // Destructuring way
+       const [f1, f2, f3] = fruits;
+
+       console.log(f1); // 🍎 Apple
+      console.log(f2); // 🍌 Banana
+      console.log(f3); // 🍒 Cherry
+
+      //You can even skip elements:
+
+      const [firstFruit, , thirdFruit] = fruits;
+       console.log(thirdFruit); // 🍒 Cherry
+
+
+   
+        </script>
+
+   
+</body>
+</html>

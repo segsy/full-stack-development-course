@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays & Objects</title>
+</head>
+<body>
+  <script>
+    let students =["john",'Jane','David','Sara'];
+    students.push('Emily');
+    students.splice(2,1,'Michael');
+    console.log(students);
+/*
+let students =["john",'Jane','David','Sara'];
+    students.pop('john');
+    
+    console.log(students);*/
+     /*let students =["john",'Jane','David','Sara'];
+    students[1] = "Michael"; // Change the second item
+ //Loop through an array
+//for (let i = 0; i < students.length; i++) {
+  students.forEach(student => console.log(student));
+  //console.log(students[i]);
+//} */
+
+let products = ["Laptop", "Tablet", "Phone"];
+
+products.forEach(product => {
+  console.log(`Product available: ${product}`);
+});
+
+
+
+  </script>
+</body>
+</html>
